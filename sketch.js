@@ -10,13 +10,13 @@ const Body = Matter.Body;
 
 
 function setup() {
-	createCanvas(800, 700);
+	createCanvas(1600, 700);
 
 	engine = Engine.create();
 	world = engine.world; 
 	
 	groundSprite=createSprite(width/2, height-40, width,10);
-	groundSprite.shapeColor=color(0,128,0)
+	groundSprite.shapeColor=color("blue")
 
 
 	
@@ -26,9 +26,9 @@ function setup() {
 	ground = Bodies.rectangle(width/2, 650, width, 10 , {isStatic:true} );
 	 World.add(world, ground);
 	 
-	 paper = new Paper(100,200,200);
+	 paper = new Paper(110,640,70);
     //side1 = new Dustbin(510,610,20,100);
-	side2 = new Dustbin(620,560,200,200);
+	side2 = new Dustbin(1200,540,300,40);
 	//side3 = new Dustbin(730,610,20,100);
 	
 	Engine.run(engine);
@@ -38,7 +38,7 @@ function setup() {
 
 function draw() {
   rectMode(CENTER);
-  background("black");
+  background("pink");
   Engine.update(engine);
 
 
@@ -54,7 +54,7 @@ side2.display();
 }
 function keyPressed() {
 	if (keyCode === UP_ARROW) {
-	   Matter.Body.applyForce(paper.body,paper.body.position,{x:30,y:-30})
+	   Matter.Body.applyForce(paper.body,paper.body.position,{x:75,y:-73})
 	 }
    }
 

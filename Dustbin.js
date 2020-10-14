@@ -10,6 +10,7 @@ class Dustbin {
       this.height = height;
      this.x = x;
      this.y= y;
+
       World.add(world, this.body);
     }
     display(){
@@ -17,8 +18,9 @@ class Dustbin {
      
       push();
       
+
       imageMode(CENTER);
-        image(this.image, pos.x, pos.y, this.width, this.height);
+        image(this.image, pos.x, pos.y, this.widtH+50, this.height+200);
        
       
   
